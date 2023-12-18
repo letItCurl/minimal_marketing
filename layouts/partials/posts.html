@@ -1,0 +1,69 @@
+<div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50">
+  <div class="px-4 not-prose">
+      <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3">
+          <!---->
+          {{ range where .Paginator.Pages "Params.draft" "eq" false }}
+          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-900 ring-2 ring-gray-400">
+              <a href="{{.Permalink}}" class="relative hover:opacity-50">
+                  {{ with .Params.featured_image }}
+                  {{ with resources.Get . }}
+                  {{ $postimage := (.Fill "500x300 center webp q90").RelPermalink }}
+                  <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg" width="100%" height=""
+                       loading="lazy" alt="{{ .Title }}" />
+
+                  {{ end }}
+                  {{ end }}
+                  <div class="absolute inset-0 flex justify-center items-center">
+                      <div class="px-3 block text-center mt-2 text-2xl font-black text-white hover:text-primary-600 dark:hover:text-primary-500">{{.Title}}</div>
+                  </div>
+              </a>
+              <div class="p-6 flex flex-col justify-between grow border-t-2 border-gray-400">
+                  <div class="flex-1">
+                      <!--
+                      <a href="{{.Permalink}}"
+                         class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
+                          {{.Title}}
+                      </a>
+                      -->
+                      <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
+                          {{ .Params.summary }}
+                      </p>
+                  </div>
+                  <div class="">
+                      <div class="flex pt-6 font-medium text-primary-600 dark:text-primary-100 text-md">
+                          <span class="pr-2 font-black">Tags:</span>
+                          <span>
+                          {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
+                            <a href="{{ .Permalink }}" class="inline-flex items-center rounded-md bg-gray-300 hover:bg-primary-200 hover:text-black px-2.5 py-0.5 text-sm font-medium text-gray-900 capitalize">{{ .LinkTitle }}</a>
+                          {{- end -}}
+                          </span>
+                      </div>
+                      <div class="flex items-center mt-6">
+                          <div class="flex-shrink-0">
+                              <span class="sr-only">{{ .Params.author }}</span>
+                              {{ with .Params.authorimage }}
+                              {{ with resources.Get . }}
+                              {{ $authorimage := (.Resize "40x webp").RelPermalink }}
+                              <img class="w-10 h-10 rounded-full" src="{{ $authorimage }}" alt="">
+                              {{ end }}
+                              {{ end }}
+                          </div>
+                          <div class="pt-1 ml-3">
+                              <p class="text-sm font-medium text-gray-900 dark:text-white">
+                                  {{ .Params.author }}
+                              </p>
+                              <div class="flex space-x-1 text-sm text-gray-500 dark:text-white">
+                                  <time datetime="2020-02-12">{{.Date.Format "2006-01-02"}}</time>
+                                  <span aria-hidden="true">&middot;</span>
+                                  <span>{{ math.Round (div (countwords .Content) 220.0) }}
+                                      min read</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {{ end }}
+      </div>
+  </div>
+</div>

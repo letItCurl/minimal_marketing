@@ -4,7 +4,10 @@
     {{ partial "head.html" . }}
 </head>
 <body class="bg-gray-900 text-white">
-    {{ block "main" . }}{{ end }}
+    {{ partial "navbar.html" . }}
+    <div class="pt-14">
+        {{ block "main" . }}{{ end }}
+    </div>
     {{ $isHome := eq .RelPermalink "/" }}
     {{ if not $isHome }}
         {{ partial "footer.html" . }}

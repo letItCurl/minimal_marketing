@@ -1,3 +1,29 @@
 {{ define "main" }}
-  <h1>Single</h1>
+  <article>
+    <div class="max-w-4xl mx-auto mt-8 mb-2">
+      <div class="relative px-6">
+        {{ with .Params.featured_image }}
+          {{ with resources.Get . }}
+            {{ $small := (.Resize "400x240 Center webp q80").RelPermalink }}
+            {{ $medium := (.Resize "550x300 Center webp q80").RelPermalink }}
+            {{ $large := (.Resize "900x553 Center webp q80").RelPermalink }}
+            {{ $featuredimage := (.Fill "1500x900 Center webp q80").RelPermalink }}
+            <img src="{{ $featuredimage }}" srcset="
+              {{- with $small -}}, {{.}} 400w{{- end -}}
+              {{- with $medium -}}, {{.}} 550w{{- end -}}
+              {{- with $large -}}, {{.}} 768w{{- end -}}
+              {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}"
+                class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
+                width="100%" alt="{{ .Params.title }}" />
+          {{ end }}
+        {{ end }}
+        <div class="px-6 absolute inset-0 flex justify-center items-center">
+          <div class="px-3 sm:text-5xl text-3xl font-black text-center text-white capitalize">{{ .Title }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-8xl px-6 pt-6 pb-16 mx-auto prose prose-invert">
+      {{.Content}}
+    </div>
+  </article>
 {{ end }}

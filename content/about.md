@@ -6,4 +6,26 @@ description: This my next awesome post about stuff that my audience love to read
 featured_image: ../assets/images/defaults/featured_image.jpg
 ---
 
-# New content
+# Advocating for better work ethics
+> lorem
+
+## Title
+
+Some text
+
+- list
+
+- [ ] list
+
+- [x] list
+
+```
+Text
+```
+**Hello**
+
+---
+
+### Title
+
+### Title

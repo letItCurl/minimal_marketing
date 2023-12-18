@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ partial "tailwind_styles.html" . }}
+
+    <title itemprop="name">
+        {{if .IsHome}}
+            {{ .Title }}
+        {{else}}
+            {{ .Title }} | {{ .Site.Title }}
+        {{end}}
+    </title>
+
+    <!-- @TODO Google tag (gtag.js) -->
+</head>
+<body class="">
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+</body>
+</html>

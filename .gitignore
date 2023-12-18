@@ -1,0 +1,10 @@
+node_modules/
+resources/
+public/
+.hugo_build.lock
+.vercel
+yarn-error.log
+# Local Netlify folder
+.netlify
+yarn-error.log
+.DS_Store

@@ -1,13 +1,7 @@
 # TODO
 
-- Seo tags DONE
-- Basic image DONE
-- G2A DONE
-- Landing page
-- Blog single
-- Blog list
-- About
-
-- Form
-- Calendy
+- mobile nav bar js
+- Test it
 - Read me
+- Think about how to market it
+- Ship

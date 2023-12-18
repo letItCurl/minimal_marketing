@@ -1,0 +1,31 @@
+baseURL: 'https://minimal-marketing.pages.dev'
+title: 'Minimal Marketing'
+languageCode: en-us
+DefaultContentLanguage: en
+enableEmoji: true
+enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: true
+paginate: 9
+enableInlineShortcodes: true
+
+params:
+  author:
+  authorimage: /images/defaults/author.jpg
+  og_image: /images/defaults/featured_image.jpg
+  moto: "Learn marketing at a minimal cost."
+  description: "This website costs only $10/year to host. Which leaves you plenty of room to experiment with your time without burning cash on marketing."
+  google_analytics_id: '' # @NOTE: To remove the G2A tag, juste leave this key to an empty string.
+  footer:
+    social_url: https://twitter.com/afrodudeonabike
+    social_username: '@afrodudeonabike'
+
+
+taxonomies:
+  category: Categories
+  tag: Tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

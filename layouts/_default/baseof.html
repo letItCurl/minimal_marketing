@@ -1,23 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Language.Lang }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    {{ partial "tailwind_styles.html" . }}
-
-    <title itemprop="name">
-        {{if .IsHome}}
-            {{ .Title }}
-        {{else}}
-            {{ .Title }} | {{ .Site.Title }}
-        {{end}}
-    </title>
-
-    <!-- @TODO Google tag (gtag.js) -->
+    {{ partial "head.html" . }}
 </head>
-<body class="">
+<body class="bg-gray-900 text-white">
     {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
+    {{ $isHome := eq .RelPermalink "/" }}
+    {{ if not $isHome }}
+        {{ partial "footer.html" . }}
+    {{ end }}
 </body>
 </html>

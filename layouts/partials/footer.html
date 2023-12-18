@@ -1,7 +1,4 @@
-<div class="max-w-7xl mx-auto">
-  <hr class="border-black-600/10">
-</div>
-<div class="flex flex-col justify-center items-center py-24 font-bold text-black-600 text-xl w-100 space-y-4">
+<div class="flex flex-col justify-center items-center pb-24 font-bold text-black-600 text-xl w-100 space-y-4 z-50">
   <div class="flex justfy-center space-x-3">
     <a href="/about" class="hover:underline hover:text-black-600">About</a>
     <div>|</div>
@@ -9,7 +6,7 @@
   </div>
   <div class="font-normal text-sm">
     Made by
-    <a href="https://twitter.com/afrodudeonabike" target="_blank" class="font-extrabold hover:underline hover:text-black-600">@afrodudeonabike</a>
+    <a href="{{ .Site.Params.footer.social_url }}" target="_blank" class="font-extrabold hover:underline hover:text-black-600">{{ .Site.Params.footer.social_username }}</a>
     with ❤️
   </div>
 </div>

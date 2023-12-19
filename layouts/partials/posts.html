@@ -3,7 +3,7 @@
       <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3">
           <!---->
           {{ range where .Paginator.Pages "Params.draft" "eq" false }}
-          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-900 ring-2 ring-gray-400">
+          <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-900 ring-2 ring-gray-700">
               <a href="{{.Permalink}}" class="relative hover:opacity-50">
                   {{ with .Params.featured_image }}
                   {{ with resources.Get . }}
@@ -17,7 +17,7 @@
                       <div class="px-3 block text-center mt-2 text-2xl font-black text-white hover:text-primary-600 dark:hover:text-primary-500">{{.Title}}</div>
                   </div>
               </a>
-              <div class="p-6 flex flex-col justify-between grow border-t-2 border-gray-400">
+              <div class="p-6 flex flex-col justify-between grow border-t-2 border-gray-700">
                   <div class="flex-1">
                       <!--
                       <a href="{{.Permalink}}"

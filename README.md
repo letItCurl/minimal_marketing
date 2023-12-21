@@ -34,7 +34,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/letItCurl/minimal_marketing/main/images/homepage.png" alt="Minimal Marketing" style="margin: 25px auto; max-width: 830px" width="100%" height="" />
+  <img src="https://raw.githubusercontent.com/letItCurl/minimal_marketing/main/images/homepage.png" alt="Minimal Marketing" style="margin: 25px auto; max-width: 830px" width="100%" height="" />
 </p>
 
 # Getting started

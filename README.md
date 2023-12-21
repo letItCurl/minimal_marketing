@@ -3,17 +3,6 @@
  <p align="center">This is a simple website that is optimized for converting traffic to a marketing goal. It costs only $10/year to host, hence minimal marketing.</p>
 </p>
   <p align="center">
-    <a href="https://github.com/letItCurl/minimal_marketing/contributors">
-      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/nusserstudios/tailbliss?color=0088ff" />
-    </a>
-    <a href="https://github.com/letItCurl/minimal_marketing/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/nusserstudios/tailbliss?color=fc0b03" />
-    </a>
-    <a href="https://github.com/letItCurl/minimal_marketing/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/nusserstudios/tailbliss?color=f97316" />
-    </a>
-    <br>
-    <br>
     <a href="https://gohugo.io/">
       <img src="https://img.shields.io/badge/Hugo%20-0.110.0%20-gray.svg?colorA=c9177e&colorB=FF4088&style=for-the-badge"/>
     </a>

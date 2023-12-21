@@ -32,3 +32,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.110.0"

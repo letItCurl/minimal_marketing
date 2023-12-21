@@ -1,0 +1,20 @@
+name = "Minimal Marketing"
+license = "MIT"
+licenselink = "https://github.com/letItCurl/minimal_marketing/blob/main/LICENSE"
+description = "This is a simple website that is optimized for converting traffic to a marketing goal. It costs only $10/year to host, hence minimal marketing."
+
+homepage = "https://github.com/gohugoio/gohugoioTheme"
+demosite = "https://minimal-marketing.pages.dev/"
+
+tags = ["blog", "company", "marketing", "landing page"]
+features = ["tailwind", "form", "CTA", "Google analytics"]
+
+[author]
+    name = "Roland Lopez"
+    homepage = "https://twitter.com/afrodudeonabike"
+
+[original]
+  name = "Hugo-Tailwind-3.1"
+  author = "4044ever"
+  homepage = "https://github.com/4044ever"
+  repo = "https://github.com/4044ever/Hugo-Tailwind-3.1"
